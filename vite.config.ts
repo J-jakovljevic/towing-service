@@ -1,14 +1,22 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
-import react from '@vitejs/plugin-react';
-import svgrPlugin from 'vite-plugin-svgr';
+import { defineConfig } from "vite";
+import * as path from "path";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgrPlugin()],
+  plugins: [
+    // The React and Tailwind plugins are both required for Make, even if
+    // Tailwind is not being actively used – do not remove them
+    react(),
+    tailwindcss(),
+  ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      // Alias @ to the src directory
+      "@": path.resolve(__dirname, "./src"),
     },
   },
+
+  // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
+  assetsInclude: ["**/*.svg", "**/*.csv"],
 });
