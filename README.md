@@ -1,30 +1,88 @@
-# React + TypeScript + Vite
+# Towing Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page for a 24/7 towing, roadside recovery and vehicle repair business. The site presents the company's core services, availability, key benefits and contact information in a modern single-page layout.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive layouts optimized for desktop and mobile devices
+- Dedicated sections for towing, workshop and box truck services
+- Animated content and transitions powered by Motion
+- Reusable, typed React components
+- Custom design system built with Tailwind CSS
+- Error boundary for graceful UI failure handling
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Vite 5
+- Tailwind CSS 4
+- Motion
+- Lucide React
+- Vitest and React Testing Library
+- ESLint and Prettier
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone <repository-url>
+cd towing-service
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Vite will print the local development URL in the terminal, typically `http://localhost:5173`.
+
+## Available Scripts
+
+| Command                | Description                                               |
+| ---------------------- | --------------------------------------------------------- |
+| `npm run dev`          | Start the Vite development server with hot reload         |
+| `npm run build`        | Type-check and create a production build                  |
+| `npm run preview`      | Preview the production build locally                      |
+| `npm run typecheck`    | Run TypeScript checks without emitting files              |
+| `npm run lint`         | Run ESLint across TypeScript and React files              |
+| `npm run format`       | Format the project with Prettier                          |
+| `npm run format:check` | Check formatting without changing files                   |
+| `npm run test`         | Run the test suite once with Vitest                       |
+| `npm run check`        | Run linting, type checks, tests, and the production build |
+
+## Project Structure
+
+```text
+src/
+├── assets/          # Images and other static assets
+├── components/      # Reusable page sections and UI components
+├── models/          # Typed content and data models
+├── pages/           # Top-level page components
+├── styles/          # Global styles, fonts, Tailwind, and theme tokens
+├── utils/           # Animation and theme utilities
+├── App.tsx          # Application root
+└── main.tsx         # Client entry point
+```
+
+The main service, statistics, and promise content is defined in `src/models/home.ts`. Hero images are exported from `src/assets/index.ts`.
+
+## Production Build
+
+Create an optimized build with:
+
+```bash
+npm run build
+```
+
+The generated files are written to the `dist/` directory and can be deployed to any static hosting provider.
