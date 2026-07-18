@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-it('renders heading', () => {
+it("renders the towing service landing page", () => {
   render(<App />);
-  const text = screen.getByText(/Hello World!/i);
-  expect(text).toBeTruthy();
+
+  expect(screen.getByText(/24\/7 Roadside Assistance/i)).toBeTruthy();
 });

@@ -1,7 +1,13 @@
-import './App.css';
+import "./styles/index.css";
+import ErrorBoundary from "@/components/errorBoundary/ErrorBoundary";
+import HomePage from "@/pages/HomePage";
 
-function App() {
-  return <h1>Hello World!</h1>;
-}
+const App = () => {
+  return (
+    <ErrorBoundary>
+      <HomePage />
+    </ErrorBoundary>
+  );
+};
 
 export default App;
