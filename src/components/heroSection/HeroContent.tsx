@@ -26,8 +26,8 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
 
   const badgeSize = isDesktop ? "lg" : "sm";
   const badgeTextClassName = isDesktop
-    ? "text-xs font-bold tracking-[0.25em] uppercase text-foreground/60"
-    : "text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/60";
+    ? "text-xs font-bold tracking-[0.25em] uppercase text-white"
+    : "text-[10px] font-bold tracking-[0.2em] uppercase text-white";
 
   const contentWrapperClassName = isDesktop
     ? "relative z-10 px-12 pt-10 max-w-3xl"
