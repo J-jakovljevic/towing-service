@@ -25,7 +25,6 @@ const StatsGrid = ({ stats }: StatsGridProps) => {
           variants={scaleIn}
           whileHover={{
             backgroundColor: "#1a1a1a",
-            scale: 1.02,
           }}
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
           className="bg-card text-center py-10 px-4 cursor-default"
@@ -41,6 +40,7 @@ const StatsGrid = ({ stats }: StatsGridProps) => {
           >
             {num}
           </motion.div>
+
           <div className="text-xs font-bold tracking-widest uppercase text-foreground/50">
             {label}
           </div>

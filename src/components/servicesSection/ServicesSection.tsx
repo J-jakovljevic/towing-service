@@ -34,11 +34,12 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid md:grid-cols-3 gap-px bg-border"
+          className="grid gap-px bg-border md:grid-cols-2"
         >
           {services.map((service) => (
             <motion.div
               key={service.title}
+              className="h-full"
               variants={{
                 hidden: { opacity: 0, y: 60, scale: 0.95 },
                 show: {

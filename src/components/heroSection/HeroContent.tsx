@@ -100,11 +100,9 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
         >
           <span className={badgeTextClassName}>We Are</span>
 
-          <INBadge size={badgeSize} />
+          <INBadge size={badgeSize} rotates />
 
-          <span className={badgeTextClassName}>
-            {isDesktop ? " , Are You?" : ", Are You?"}
-          </span>
+          <span className={badgeTextClassName}>, Are You?</span>
         </motion.div>
       </div>
 
@@ -128,7 +126,7 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
             color: "#0a0a0a",
             fontFamily: accentFont,
             fontSize: isDesktop ? "1rem" : undefined,
-            boxShadow: isDesktop ? `0 0 32px ${YELLOW}55` : undefined,
+            y: isDesktop ? -46 : 0,
           }}
         >
           <Phone size={iconSize} strokeWidth={2.5} />

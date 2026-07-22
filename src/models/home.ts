@@ -1,9 +1,18 @@
-export type ServiceType = "towing" | "repair" | "truck";
+export type ServiceType =
+  | "towing"
+  | "repair"
+  | "truck"
+  | "roadside"
+  | "recruiting"
+  | "tire"
+  | "oil"
+  | "bodywork";
 
 export type ServiceItem = {
   icon: ServiceType;
   title: string;
   items: string[];
+  compact?: boolean;
 };
 
 export type StatItem = {
@@ -60,5 +69,46 @@ export const services: ServiceItem[] = [
       "DOT Inspections",
       "Fleet Maintenance",
     ],
+  },
+  {
+    icon: "towing",
+    title: "Tow Service",
+    items: ["Box trucks", "Semi trucks", "Recovery"],
+  },
+  {
+    icon: "roadside",
+    title: "Roadside Assistance",
+    items: ["Highly experienced", "Fast response", "Friendly pricing"],
+  },
+  {
+    icon: "recruiting",
+    title: "Recruiting",
+    items: [
+      "Apply for CDL: Dry Van, Flatbed, Conestoga",
+      "Non-CDL: Box Truck",
+      "Owner-operators welcome",
+    ],
+  },
+  {
+    icon: "truck",
+    title: "Truck Repairs",
+    items: ["Specialized in all kinds of box trucks"],
+  },
+  {
+    icon: "oil",
+    title: "Oil Change Express",
+    items: [],
+  },
+  {
+    icon: "tire",
+    title: "Tire Shop",
+    items: [],
+    compact: true,
+  },
+  {
+    icon: "bodywork",
+    title: "Bodywork",
+    items: [],
+    compact: true,
   },
 ];

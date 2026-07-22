@@ -1,3 +1,5 @@
+import { CircleDot, Droplet, LifeBuoy, Paintbrush, Users } from "lucide-react";
+
 import { YELLOW } from "@/utils/theme";
 import type { ServiceItem } from "@/models/home";
 
@@ -109,6 +111,16 @@ const IconBoxTruck = () => {
 
 const ServiceIcon = ({ icon }: ServiceIconProps) => {
   switch (icon) {
+    case "roadside":
+      return <LifeBuoy color={YELLOW} width="100%" height="100%" />;
+    case "recruiting":
+      return <Users color={YELLOW} width="100%" height="100%" />;
+    case "tire":
+      return <CircleDot color={YELLOW} width="100%" height="100%" />;
+    case "oil":
+      return <Droplet color={YELLOW} width="100%" height="100%" />;
+    case "bodywork":
+      return <Paintbrush color={YELLOW} width="100%" height="100%" />;
     case "repair":
       return <IconWrench />;
     case "truck":

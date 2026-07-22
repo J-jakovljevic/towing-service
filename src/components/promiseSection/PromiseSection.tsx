@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
 
 import { promises } from "@/models/home";
@@ -6,6 +6,8 @@ import { slideRight } from "@/utils/animations";
 import { YELLOW } from "@/utils/theme";
 
 const PromiseSection = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="px-6 md:px-12 py-20 md:py-28 bg-card border-y border-border">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -32,7 +34,27 @@ const PromiseSection = () => {
               damping: 20,
             }}
           >
-            24/7
+            <motion.span
+              animate={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      textShadow: [
+                        "0 0 0 rgba(245,184,0,0)",
+                        "0 0 30px rgba(245,184,0,0.45)",
+                        "0 0 0 rgba(245,184,0,0)",
+                      ],
+                    }
+              }
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 0.8,
+                ease: "easeInOut",
+              }}
+            >
+              24/7
+            </motion.span>
           </motion.div>
 
           <motion.h2
