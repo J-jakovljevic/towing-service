@@ -71,11 +71,6 @@ export const services: ServiceItem[] = [
     ],
   },
   {
-    icon: "towing",
-    title: "Tow Service",
-    items: ["Box trucks", "Semi trucks", "Recovery"],
-  },
-  {
     icon: "roadside",
     title: "Roadside Assistance",
     items: ["Highly experienced", "Fast response", "Friendly pricing"],

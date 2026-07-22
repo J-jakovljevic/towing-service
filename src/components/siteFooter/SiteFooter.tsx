@@ -23,7 +23,7 @@ const SiteFooter = () => {
               className="font-bold text-sm uppercase leading-tight"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              IN Workshop
+              IN Repairs
             </p>
             <p className="text-xs text-foreground/40 uppercase tracking-wider">
               Towing · Recovery · Workshop

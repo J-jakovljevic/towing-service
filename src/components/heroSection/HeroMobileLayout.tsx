@@ -12,7 +12,7 @@ const HeroMobileLayout = ({ heroImageMobile }: HeroMobileLayoutProps) => {
       <motion.img
         src={heroImageMobile}
         alt="IN Workshop tow truck at golden hour"
-        className="absolute inset-0 w-full h-full object-cover object-top"
+        className="absolute inset-0 h-full w-full object-cover object-[center_50%] max-[449px]:blur-[1px] min-[450px]:object-[center_62%]"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.4, ease: "easeOut" }}

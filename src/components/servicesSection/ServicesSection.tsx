@@ -34,7 +34,7 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid gap-px bg-border md:grid-cols-2"
+          className="grid gap-px bg-border md:grid-cols-2 min-[920px]:grid-cols-3"
         >
           {services.map((service) => (
             <motion.div

@@ -11,15 +11,18 @@ type HeroContentProps = {
 
 const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
   const isMobile = !isDesktop;
+  const titleLines = isDesktop
+    ? heroLines
+    : ["Towing", "Service", "Recovery", "&", "Workshop"];
 
   const eyebrowClassName = isDesktop
     ? "text-[11px] font-bold tracking-[0.3em] uppercase mb-3"
-    : "text-[12px] font-bold tracking-[0.28em] uppercase mb-2";
+    : "text-[12px] font-bold tracking-[0.28em] uppercase mb-2 max-[449px]:hidden";
 
   const titleContainerClassName = isDesktop ? "mb-4" : "mb-3 overflow-hidden";
   const titleClassName = isDesktop
     ? "block font-black uppercase leading-[0.88]"
-    : "block text-[4rem] font-black uppercase leading-[0.9]";
+    : "block text-[50px] font-black uppercase leading-[0.9] min-[450px]:text-[4rem]";
 
   const badgeSize = isDesktop ? "lg" : "sm";
   const badgeTextClassName = isDesktop
@@ -32,7 +35,7 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
 
   const ctaContainerClassName = isDesktop
     ? "absolute bottom-8 left-0 right-0 z-10 px-12 flex items-center justify-between"
-    : "relative z-10 px-6 pb-5 flex flex-col gap-2";
+    : "relative z-10 px-6 pb-2 flex flex-col gap-2";
 
   const ctaButtonClassName = isDesktop
     ? "inline-flex items-center gap-3 px-7 py-3.5 font-bold uppercase tracking-wider transition-shadow"
@@ -64,7 +67,7 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
         </motion.p>
 
         <div className={titleContainerClassName}>
-          {heroLines.map((line: string, i: number) => (
+          {titleLines.map((line: string, i: number) => (
             <div key={line} className="overflow-hidden">
               <motion.span
                 className={titleClassName}
@@ -117,7 +120,7 @@ const HeroContent = ({ isDesktop = false }: HeroContentProps) => {
         className={ctaContainerClassName}
       >
         <motion.a
-          href="tel:+1800000000"
+          href="tel:+16304083436"
           whileHover={{ scale: isDesktop ? 1.04 : 1.02 }}
           whileTap={{ scale: isDesktop ? 0.96 : 0.97 }}
           className={ctaButtonClassName}

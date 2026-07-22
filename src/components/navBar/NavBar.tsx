@@ -23,7 +23,7 @@ const NavBar = () => {
         <INBadge size="sm" />
 
         <span className="font-semibold text-sm tracking-wide text-foreground/60 uppercase">
-          Workshop
+          Repairs
         </span>
       </motion.div>
 
@@ -47,7 +47,7 @@ const NavBar = () => {
         }}
       >
         <motion.a
-          href="tel:+1800000000"
+          href="tel:+16304083436"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
