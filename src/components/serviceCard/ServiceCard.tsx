@@ -54,10 +54,10 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         boxShadow: `0 16px 48px rgba(0,0,0,0.5), inset 0 0 0 1px ${YELLOW}33`,
       }}
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
-      className={`h-full bg-card ${
+      className={`bg-card ${
         service.compact
-          ? "min-h-[140px] p-6 md:min-h-[150px] md:p-8"
-          : "min-h-[190px] p-8 md:min-h-[210px] md:p-10"
+          ? "h-[120px] p-5 md:h-full md:min-h-[150px] md:p-8"
+          : "h-full min-h-[190px] p-8 md:min-h-[210px] md:p-10"
       }`}
     >
       <div

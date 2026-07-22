@@ -20,7 +20,7 @@ const ScrollCue = () => {
     <motion.a
       href="#overview"
       aria-label="Scroll to explore our services"
-      className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-0.5 text-[9px] font-bold uppercase tracking-[0.22em] text-white md:bottom-5 md:text-[10px]"
+      className="absolute bottom-2 right-3 z-20 flex flex-col items-center gap-0.5 text-[9px] font-bold uppercase tracking-[0.22em] text-white md:bottom-5 md:right-auto md:left-1/2 md:-translate-x-1/2 md:text-[10px]"
       initial={{ opacity: 0, y: 12 }}
       animate={hasScrolled ? { opacity: 0, y: -8 } : { opacity: 1, y: 0 }}
       transition={

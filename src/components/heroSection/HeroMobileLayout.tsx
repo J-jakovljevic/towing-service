@@ -8,7 +8,7 @@ type HeroMobileLayoutProps = {
 
 const HeroMobileLayout = ({ heroImageMobile }: HeroMobileLayoutProps) => {
   return (
-    <div className="md:hidden flex flex-col" style={{ height: "200vw" }}>
+    <div className="flex h-[calc(100svh-81px)] flex-col md:hidden">
       <motion.img
         src={heroImageMobile}
         alt="IN Workshop tow truck at golden hour"

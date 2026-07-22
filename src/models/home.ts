@@ -98,6 +98,7 @@ export const services: ServiceItem[] = [
     icon: "oil",
     title: "Oil Change Express",
     items: [],
+    compact: true,
   },
   {
     icon: "tire",
