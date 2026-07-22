@@ -56,7 +56,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
       className={`bg-card ${
         service.compact
-          ? "h-[120px] p-5 md:h-full md:min-h-[150px] md:p-8"
+          ? "h-[120px] px-8 py-5 md:h-full md:min-h-[150px] md:px-10 md:py-8"
           : "h-full min-h-[190px] p-8 md:min-h-[210px] md:p-10"
       }`}
     >
